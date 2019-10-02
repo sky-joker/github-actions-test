@@ -19,3 +19,6 @@ jobs:
       - name: Install dependencies
         run: |
           pip install ansible
+      - name: Run playbook
+        run: |
+          ansible-playbook main.yml
