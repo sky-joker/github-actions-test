@@ -19,11 +19,11 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install ansible pyvmomi
+          pip install ansible pyvmomi docker-compose
 
       - name: setup vcsim
         run: |
-          cd /tests
+          cd tests/
           ansible-galaxy install sky_joker.ansible_vmware_govcsim_provisioner -p roles
           ansible-playbook vcsim-provisioner.yml
 
