@@ -7,11 +7,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      #- name: docker container
-      #  uses: docker://centos:7
+      - name: docker container
+        uses: docker://centos:7
       - uses: actions/checkout@master
       - name: test
         run: |
-          ls
-          hostname
-          docker ps -a
+          yum -y install httpd
