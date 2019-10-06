@@ -9,12 +9,9 @@ jobs:
     steps:
       - name: docker container
         uses: docker://centos:7
-        with:
-          run: |
-            yum -y install httpd
-            rpm -qa | grep httpd
-      # - uses: actions/checkout@master
+      - uses: actions/checkout@master
       - name: test
         run: |
-          docker ps -a
-          docker images
+          docker run -itd --name example centos:7
+          docker exec -it example yum -y install httpd
+          docker exec -it example rpm -qa
