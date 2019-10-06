@@ -9,8 +9,9 @@ jobs:
     steps:
       - name: docker container
         uses: docker://centos:7
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@master
       - name: test
         run: |
           ls
           hostname
+          docker ps -a
