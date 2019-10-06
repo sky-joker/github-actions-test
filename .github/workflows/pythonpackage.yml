@@ -13,5 +13,3 @@ jobs:
       - name: test
         run: |
           docker run -itd --name example centos:7
-          docker exec -it example yum -y install httpd
-          docker exec -it example rpm -qa
