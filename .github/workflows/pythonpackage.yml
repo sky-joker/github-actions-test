@@ -11,4 +11,6 @@ jobs:
         uses: docker://centos:7
       - uses: actions/checkout@v1
       - name: test
-        run: ls
+        run: >-
+          ls
+          hostname
