@@ -12,6 +12,7 @@ jobs:
         with:
           run: |
             yum -y install httpd
+            rpm -qa | grep httpd
       # - uses: actions/checkout@master
       - name: test
         run: |
