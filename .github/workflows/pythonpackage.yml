@@ -1,4 +1,4 @@
-name: Python package
+name: Docker test
 
 on: [push]
 
@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: docker container
         uses: docker://centos:7
-      - uses: actions/checkout@master
+      # - uses: actions/checkout@master
       - name: test
         run: |
           yum -y install httpd
