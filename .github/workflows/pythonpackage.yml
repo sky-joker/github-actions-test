@@ -13,3 +13,5 @@ jobs:
       - name: test
         run: |
           docker run -itd --name example centos:7
+          docker ps -a
+          docker exec example yum -y install httpd
