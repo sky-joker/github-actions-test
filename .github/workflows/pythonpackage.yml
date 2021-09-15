@@ -7,11 +7,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: test
+        run: ls
+
       #- name: docker container
       #  uses: docker://centos:7
-      - uses: actions/checkout@master
-      - name: test
-        run: |
-          docker run -itd --name example centos:7
-          docker ps -a
-          docker exec example yum -y install httpd
+      #- uses: actions/checkout@master
+      #- name: test
+      #  run: |
+      #    docker run -itd --name example centos:7
+      #    docker ps -a
+      #    docker exec example yum -y install httpd
