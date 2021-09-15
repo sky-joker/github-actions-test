@@ -8,7 +8,7 @@ jobs:
 
     steps:
       - name: test
-        run: ls
+        run: ansible-playbook -h
 
       #- name: docker container
       #  uses: docker://centos:7
